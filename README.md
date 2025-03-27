@@ -1,6 +1,6 @@
 # Sistema de Gestão de Vendas
 
-![Banner do Sistema](./images/banner-sistema.png)
+![Banner do Sistema](./images/img-sistema-gestor-vendas-1.png)
 
 > Sistema completo para gestão de vendas com backend API Python e frontend React moderno
 
