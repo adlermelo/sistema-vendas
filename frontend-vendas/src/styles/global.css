@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Efeitos customizados */
+@layer components {
+  /* Efeito de card glass */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+
+  /* Botão com gradiente animado */
+  .gradient-btn {
+    @apply bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-6 py-2 rounded-full 
+           shadow-md hover:shadow-lg transform hover:-translate-y-0.5 
+           transition-all duration-300 hover:bg-gradient-to-br;
+  }
+
+  /* Input moderno */
+  .modern-input {
+    @apply bg-white/50 border border-gray-200 rounded-xl px-4 py-3 
+           focus:outline-none focus:ring-2 focus:ring-blue-400/30 
+           focus:border-blue-400 transition-colors duration-200;
+  }
+
+  /* Efeito hover para itens de lista */
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-[1.02];
+  }
+
+  /* Scrollbar customizada */
+  .custom-scrollbar {
+    @apply scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent;
+  }
+}
+
+/* Animações customizadas */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Transições específicas */
+.sidebar-transition {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
